@@ -3,8 +3,16 @@
 }
 
 #nav{
-  border: 1px solid red;
-  background-color: #ff6600;
+  /*border: 1px solid red;
+  /*background-color: #ff6600;
+  /*漸層色*/  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7ba9ff+0,6095f8+44,407dee+100 */
+  background: #7ba9ff; /* Old browsers */
+  background: -webkit-linear-gradient(#7ba9ff 0%, #6095f8 44%, #407dee 100%);
+  background: -o-linear-gradient(#7ba9ff 0%, #6095f8 44%, #407dee 100%);
+  background: linear-gradient(#7ba9ff 0%, #6095f8 44%, #407dee 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ba9ff', endColorstr='#407dee',GradientType=0 ); /* IE6-9 */
+
   width: 100%;
   position: fixed;
   top: 0;
@@ -13,7 +21,7 @@
 }
 
 #content{
-  border: 1px solid blue; /*標示用，完成排版後請刪除*/
+  /*border: 1px solid blue; /*標示用，完成排版後請刪除*/
   position: relative;
   top: 78px;
   padding: 15px;
@@ -28,10 +36,11 @@
 #content >.container > div{
   padding: 78px 0;
 }
+/*
 #about, #my-work, #contact-me{
   border: 1px solid yellow;
 }
-
+*/
 .menu{
   float: right;
 }
@@ -47,7 +56,14 @@
 
   list-style-type: none;
   text-align: center;
-  background-color: #ff6600;
+  /*background-color: #ff6600;
+  /*漸層色*/
+  background: #7ba9ff; /* Old browsers */
+  background: -webkit-linear-gradient(#7ba9ff 0%, #6095f8 44%, #407dee 100%);
+  background: -o-linear-gradient(#7ba9ff 0%, #6095f8 44%, #407dee 100%);
+  background: linear-gradient(#7ba9ff 0%, #6095f8 44%, #407dee 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ba9ff', endColorstr='#407dee',GradientType=0 ); /* IE6-9 */
+
   color: #fff;
 }
 
@@ -58,12 +74,12 @@ a{
 }
 
 li:hover {
-  border: 1px solid #ff6600;
+  border: 1px solid #666666;
   background-color: #fff;
 }
 
 li:hover a{
-  color: #ff6600;
+  color: #666666;
   font-weight: 800;
 }
 
@@ -123,7 +139,7 @@ hr {
 }
 
 .item-info{
-  border: 1px solid red;  /*標示用，排完版拿掉*/
+  /*border: 1px solid red;  /*標示用，排完版拿掉*/
   background-color: rgba(255,255,255,.8);  /* 背景半透明 */
 
   position: absolute;
@@ -148,12 +164,13 @@ hr {
 }
 
 /* contact me*/
+/*
 #contact-me{
-  border: 1px solid green; /* 標示用，完成後刪除 */
+  border: 1px solid green; 標示用，完成後刪除 
 }
-
+*/
 form.contact-form{
-  border: 1px solid red; /* 標示用，完成後刪除 */
+  /*border: 1px solid red; /* 標示用，完成後刪除 */
   width: 50%;
   margin: 0 auto;
 }
@@ -195,7 +212,83 @@ form.contact-form{
 }
 
 hr.bar{
-  border: 2px solid #ff6600;
+  border: 2px solid #7ba9ff;
   width: 80px;
 }
 
+/*
+  原始 css code
+*/
+
+@media screen and (max-width: 1023px) {
+  .container{
+    width: auto;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {  
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
+  #my-avatar {
+    width: 100%;
+  }
+  #my-avatar img {
+    display: block;
+    margin: 15px auto;
+  }
+
+  .item {
+    max-width: 100%;
+  }
+
+  from.contact-form {
+    width: 80%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-button, 
+  .menu-button-checkbox {
+    display: none;
+  }
+
+}
+  /*
+    手機版的 css 都寫在這邊
+  */  
